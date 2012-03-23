@@ -473,8 +473,8 @@ window.Mercury = {
   // be called directly after the Mercury scripts have loaded, but before anything has been initialized.  It's a good
   // place to add or change functionality.
   onload: function() {
-    //Mercury.PageEditor.prototype.iframeSrc = function(url) { return '/testing'; }
-	  $(window).bind('mercury:ready', function() {
+    // Mercury.PageEditor.prototype.iframeSrc = function(url) { return '/testing'; }
+	$(window).bind('mercury:ready', function() {
 	  var link = $('#mercury_iframe').contents().find('#edit_link');
 	  Mercury.saveURL = link.data('save-url');
 	  link.hide();
@@ -482,9 +482,6 @@ window.Mercury = {
 	
 	$(window).bind('mercury:saved', function() {
 	  window.location = window.location.href.replace(/\/editor\//i, '/');
-	}),
-	
-
-  },
-
-},
+	})	
+  }
+}
