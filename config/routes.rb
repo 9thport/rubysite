@@ -1,4 +1,6 @@
 Rubysite::Application.routes.draw do
+  resources :pages
+
   Mercury::Engine.routes
 
   # The priority is based upon order of creation:
