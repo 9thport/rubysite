@@ -1,6 +1,8 @@
 Rubysite::Application.routes.draw do
-  resources :pages
-
+  resources :pages do
+    member { post :mercury_update }
+  end
+  
   Mercury::Engine.routes
 
   # The priority is based upon order of creation:
